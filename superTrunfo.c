@@ -10,6 +10,8 @@ int main() {
     int cityAttractionsQuantity1;
     float areaSize1;
     float cityGdp1;
+    float populationDensity1;
+    float GDPperCapita1;
 
     printf("Enter the card state picking from A to H (Card 1): ");
     scanf("%1s", cardState1);
@@ -33,13 +35,8 @@ int main() {
     printf("Enter the city GDP (Card 1): ");
     scanf("%f", &cityGdp1);
 
-    printf("\nCard State: %s\n", cardState1);
-    printf("Card Code: %s\n", finalCardCode1);
-    printf("City Name: %s\n", cityName1);
-    printf("Population Quantity: %lu\n", populationQuantity1);
-    printf("City Attractions Quantity: %d\n", cityAttractionsQuantity1);
-    printf("Area Size (sq km): %.2f\n", areaSize1);
-    printf("City GDP: %.2f\n\n", cityGdp1);
+    populationDensity1 = populationQuantity1 / areaSize1;
+    GDPperCapita1 = cityGdp1 / populationQuantity1;
 
     // Segunda carta
     char cardState2[2];
@@ -50,6 +47,8 @@ int main() {
     int cityAttractionsQuantity2;
     float areaSize2;
     float cityGdp2;
+    float populationDensity2;
+    float GDPperCapita2;
 
     printf("Enter the card state picking from A to H (Card 2): ");
     scanf("%1s", cardState2);
@@ -73,6 +72,19 @@ int main() {
     printf("Enter the city GDP (Card 2): ");
     scanf("%f", &cityGdp2);
 
+    populationDensity2 = populationQuantity2 / areaSize2;
+    GDPperCapita2 = cityGdp2 / populationQuantity2;
+
+    printf("\nCard State: %s\n", cardState1);
+    printf("Card Code: %s\n", finalCardCode1);
+    printf("City Name: %s\n", cityName1);
+    printf("Population Quantity: %lu\n", populationQuantity1);
+    printf("City Attractions Quantity: %d\n", cityAttractionsQuantity1);
+    printf("Area Size (sq km): %.2f\n", areaSize1);
+    printf("City GDP: %.2f\n\n", cityGdp1);
+    printf("Population Density: %.2f\n", populationDensity1);
+    printf("GDP per Capita: %.2f\n", GDPperCapita1);
+
     printf("\nCard State: %s\n", cardState2);
     printf("Card Code: %s\n", finalCardCode2);
     printf("City Name: %s\n", cityName2);
@@ -80,4 +92,6 @@ int main() {
     printf("City Attractions Quantity: %d\n", cityAttractionsQuantity2);
     printf("Area Size (sq km): %.2f\n", areaSize2);
     printf("City GDP: %.2f\n", cityGdp2);    
+    printf("Population Density: %.2f\n", populationDensity2);
+    printf("GDP per Capita: %.2f\n", GDPperCapita2);
 }
